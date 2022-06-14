@@ -1,4 +1,4 @@
-package com.ll.userlogin.service.handler
+package com.ll.userlogin.controller.handler
 
 import org.springframework.security.core.Authentication
 import org.springframework.security.web.authentication.logout.LogoutSuccessHandler

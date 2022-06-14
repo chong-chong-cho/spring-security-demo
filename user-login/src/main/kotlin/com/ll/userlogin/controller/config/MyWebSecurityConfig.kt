@@ -1,8 +1,8 @@
 package com.ll.userlogin.controller.config
 
-import com.ll.userlogin.service.handler.MyAuthenticationFailHandler
-import com.ll.userlogin.service.handler.MyAuthenticationSuccessHandler
-import com.ll.userlogin.service.handler.MyLogoutSuccessUrl
+import com.ll.userlogin.controller.handler.MyAuthenticationFailHandler
+import com.ll.userlogin.controller.handler.MyAuthenticationSuccessHandler
+import com.ll.userlogin.controller.handler.MyLogoutSuccessUrl
 import com.ll.userlogin.service.utils.Roles
 import org.springframework.context.annotation.Bean
 import org.springframework.security.config.annotation.web.builders.HttpSecurity

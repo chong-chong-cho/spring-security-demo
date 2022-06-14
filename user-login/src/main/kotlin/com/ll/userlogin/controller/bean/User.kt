@@ -1,10 +1,7 @@
 package com.ll.userlogin.controller.bean
 
-import com.ll.userlogin.repository.DbUser
+import com.ll.userlogin.service.DbUser
 import com.ll.userlogin.service.utils.Roles
-import org.springframework.security.core.GrantedAuthority
-import org.springframework.security.core.authority.AuthorityUtils
-import org.springframework.security.core.userdetails.UserDetails
 
 data class User(
     override var id: Int?,

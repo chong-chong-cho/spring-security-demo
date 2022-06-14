@@ -1,4 +1,4 @@
-package com.ll.userlogin.repository
+package com.ll.userlogin.service
 
 import com.ll.userlogin.controller.bean.User
 import org.apache.ibatis.annotations.Delete
