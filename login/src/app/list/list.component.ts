@@ -14,8 +14,6 @@ export class ListComponent implements OnInit {
 
   listOfData: User[] = [];
 
-  radioValue = 'A';
-
   list(){
     this.listservice.list()
     .subscribe({

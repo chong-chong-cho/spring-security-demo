@@ -1,8 +1,7 @@
 package com.ll.userlogin.controller
 
-import com.ll.userlogin.bean.User
+import com.ll.userlogin.controller.bean.User
 import com.ll.userlogin.service.UserService
-import com.ll.userlogin.utils.R
 import io.swagger.annotations.Api
 import io.swagger.annotations.ApiOperation
 import org.springframework.beans.factory.annotation.Autowired
@@ -20,7 +19,8 @@ class UserController {
     @GetMapping("/query/{id}")
     @ApiOperation("登录", notes = "用户信息")
     fun login(@PathVariable id : Int) : User {
-        return userService.queryById(id)
+        var user : User = userService.queryById(id)
+        return user
     }
 
     @PostMapping("/register")
@@ -32,7 +32,9 @@ class UserController {
     @GetMapping("/list")
     @ApiOperation("查询所有", notes = "展示所有用户信息")
     fun listAll() : List<User>{
-        return userService.listAll()
+        var list : List<User> = userService.listAll()
+        list as List<User>
+        return list
     }
 
     @PutMapping("/update")

@@ -1,4 +1,4 @@
-<div *ngIf="user.id != 0">
+<div *ngIf="user.id > 0">
     <nz-descriptions nzTitle="User Info">
     <nz-descriptions-item nzTitle="User_id">{{user.id}}</nz-descriptions-item>
     <nz-descriptions-item nzTitle="username">{{user.userName}}</nz-descriptions-item>
@@ -6,11 +6,11 @@
     <nz-descriptions-item nzTitle="ROLE">{{user.role}}</nz-descriptions-item>
     <nz-descriptions-item nzTitle="Address">
       {{user.address}}
-    </nz-descriptions-item>  
+    </nz-descriptions-item>
   </nz-descriptions>
 </div>
-<div *ngIf="user.id == 0">
+<div *ngIf="user.id == -1">
   <h1>权限不足，无法查看</h1>
 </div>
-    
+
 

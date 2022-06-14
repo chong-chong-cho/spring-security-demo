@@ -24,7 +24,7 @@ export class InfoComponent implements OnInit {
   ngOnInit(): void {
     this.router.params.subscribe(item=>{
      console.log("sdf");
-      
+
       this.getUser(item['id'])
     })
   }
@@ -35,7 +35,7 @@ export class InfoComponent implements OnInit {
        this.user = a
      },
      error:(err:any)=>{
-       this.user.id = 0
+       this.user.id = -1
      }
     })
   }

@@ -1,4 +1,4 @@
-package com.ll.userlogin.utils
+package com.ll.userlogin.service.utils
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration

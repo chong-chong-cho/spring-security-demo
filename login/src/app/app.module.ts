@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { LoginsComponent } from './logins/logins.component';
 import { InfoComponent } from './info/info.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { zh_CN, en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
@@ -19,6 +19,7 @@ import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { ListComponent } from './list/list.component';
 import { NzDescriptionsModule } from 'ng-zorro-antd/descriptions';
+import {MyInterceptorInterceptor} from "./my-interceptor.interceptor";
 
 
 registerLocaleData(zh);
@@ -43,7 +44,7 @@ registerLocaleData(zh);
     NzDividerModule,
     NzDescriptionsModule
   ],
-  providers: [{ provide: NZ_I18N, useValue: zh_CN }],
+  providers: [{ provide: NZ_I18N, useValue: zh_CN },{ provide: HTTP_INTERCEPTORS, useClass: MyInterceptorInterceptor, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

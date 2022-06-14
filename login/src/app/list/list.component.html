@@ -1,14 +1,15 @@
 
-<nz-table #basicTable [nzData]="listOfData">
-  <thead>
+<div>
+  <nz-table #basicTable [nzData]="listOfData">
+    <thead>
     <tr>
       <th>Name</th>
       <th>Sex</th>
       <th>Role</th>
       <th>Action</th>
     </tr>
-  </thead>
-  <tbody>
+    </thead>
+    <tbody>
     <tr *ngFor="let data of basicTable.data">
       <td>{{ data.userName }}</td>
       <td>{{ data.sex }}</td>
@@ -17,7 +18,8 @@
         <a routerLink="info/{{ data.id}}">look-{{ data.userName }}</a>
       </td>
     </tr>
-  </tbody>
-</nz-table>
+    </tbody>
+  </nz-table>
+</div>
 
 <router-outlet></router-outlet>

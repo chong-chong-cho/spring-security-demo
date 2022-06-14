@@ -1,8 +1,6 @@
 package com.ll.userlogin.service
 
-import com.ll.userlogin.bean.User
-import com.ll.userlogin.utils.R
-import org.springframework.stereotype.Service
+import com.ll.userlogin.controller.bean.User
 
 interface UserService {
     /**

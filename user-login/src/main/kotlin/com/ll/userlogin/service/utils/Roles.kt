@@ -1,4 +1,4 @@
-package com.ll.userlogin.utils
+package com.ll.userlogin.service.utils
 
 enum class Roles {
     ROLE_MANAGER,ROLE_USER

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoginService } from '../login.service';
+import {HttpErrorResponse, HttpResponse} from "@angular/common/http";
 
 @Component({
   selector: 'app-logins',
@@ -11,7 +12,6 @@ import { LoginService } from '../login.service';
 export class LoginsComponent implements OnInit {
 
   validateForm!: FormGroup;
-  message : String = ""
 
   constructor(private loginService : LoginService,private router : Router,private fb: FormBuilder) { }
 
@@ -22,12 +22,12 @@ export class LoginsComponent implements OnInit {
      .subscribe({
        next:(a: any ) => {
         console.log(a)
-        if(a == "用户名或密码错误"){
-          this.message = a
-        }else{
-          this.router.navigateByUrl("/list")
-        }
-      }
+         this.router.navigateByUrl("/list")
+      },
+       error:(error : HttpErrorResponse) => {
+         alert(error.error)
+         console.log(error.error)
+       }
      })
   }
 

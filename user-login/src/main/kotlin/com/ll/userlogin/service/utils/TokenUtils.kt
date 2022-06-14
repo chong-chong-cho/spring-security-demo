@@ -1,7 +1,7 @@
-package com.ll.userlogin.utils
+package com.ll.userlogin.service.utils
 
 import com.fasterxml.jackson.databind.ObjectMapper
-import com.ll.userlogin.bean.User
+import com.ll.userlogin.controller.bean.User
 import io.jsonwebtoken.Claims
 import io.jsonwebtoken.Jwts
 import io.jsonwebtoken.SignatureAlgorithm

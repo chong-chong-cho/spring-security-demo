@@ -1,11 +1,9 @@
-package com.ll.userlogin.service.impl
+package com.ll.userlogin.service
 
-import com.ll.userlogin.bean.User
-import com.ll.userlogin.mapper.UserMapper
-import com.ll.userlogin.service.UserService
-import com.ll.userlogin.utils.Roles
+import com.ll.userlogin.controller.bean.User
+import com.ll.userlogin.repository.UserMapper
+import com.ll.userlogin.service.utils.Roles
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.security.authentication.InternalAuthenticationServiceException
 import org.springframework.security.core.authority.AuthorityUtils
 import org.springframework.security.core.userdetails.UserDetails
 import org.springframework.security.core.userdetails.UserDetailsService

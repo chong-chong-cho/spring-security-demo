@@ -1,4 +1,4 @@
-package com.ll.userlogin.handler
+package com.ll.userlogin.service.handler
 
 import org.springframework.security.core.Authentication
 import org.springframework.security.web.authentication.logout.LogoutSuccessHandler
@@ -11,6 +11,6 @@ class MyLogoutSuccessUrl : LogoutSuccessHandler {
         response: HttpServletResponse,
         authentication: Authentication?
     ) {
-        response.sendRedirect("http://localhost:4200/login")
+        response.sendRedirect("/user/login")
     }
 }
